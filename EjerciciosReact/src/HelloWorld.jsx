@@ -1,16 +1,20 @@
+export function Age({age}){
+    let strongAge = <strong>{age}</strong>;
+return <p>Your age is {strongAge}</p>
+}
 export function Welcome({ name = "Usuario desconocido", age }) {
-  let strongAge = <strong>{age}</strong>;
+  
   return (
     <>
       <p>Welcome, {name}!</p>
-      <p>Your age is {strongAge}</p>
+      <Age age={age}/>
     </>
   );
 }
 export function App() {
   return (
     <div>
-      <Welcome name="Pepe" age={15} />
+      <Welcome name="Pepe" age={17} />
     </div>
   );
 }
